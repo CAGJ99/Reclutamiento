@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <mat-toolbar>
+
+        </mat-toolbar>
+        <mat-nav-list>
+            <h2> <i class="material-icons">
+                language
+                </i>Personajes</h2>
+            <a mat-list-item [routerLink]="['marvel/characters']">Heroes</a>
+            <h2 class="titles"> <i class="material-icons">
+                book
+                </i>Revistas</h2>
+            <a mat-list-item [routerLink]="['marvel/comics']">Historietas</a>
+            <h2 class="titles"> <i class="material-icons">
+                accessibility
+                </i>Personas</h2>
+            <a mat-list-item [routerLink]="['marvel/creators']">Autores</a>
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+            <span><a [routerLink]="['home']">
+                <div class="logox"><img src="../../../assets/marvel.png" alt="" class="positronx"></div>
+            </a></span>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

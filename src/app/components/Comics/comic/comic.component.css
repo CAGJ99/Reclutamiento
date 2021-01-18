@@ -1,0 +1,8 @@
+.mat-card-image {
+    min-height: 374px;
+    max-height: 374px;
+}
+
+mat-card-title {
+    font-size: small;
+}

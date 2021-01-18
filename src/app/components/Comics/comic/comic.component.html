@@ -1,0 +1,12 @@
+<mat-card>
+
+    <img mat-card-image src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="{{comic.title}}">
+    <mat-card-title>
+        <p>{{comic.title}}</p>
+    </mat-card-title>
+    <mat-card-footer>
+        <a target="_blank" fxFlex mat-flat-button color="primary" (click)="sendId(comic.id)">
+            Detalles
+          </a>
+    </mat-card-footer>
+</mat-card>

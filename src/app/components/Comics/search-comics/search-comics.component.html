@@ -1,0 +1,19 @@
+<div class="wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let Comics of comic" style="padding: 5px;">
+        <mat-card>
+            <img mat-card-image src="{{Comics.thumbnail.path}}.{{Comics.thumbnail.extension}}" alt="{{Comics.title}}">
+            <mat-card-title>
+                <p>{{Comics.title}}</p>
+            </mat-card-title>
+            <mat-card-content>
+                <p>
+                    Informacion:
+                    <a href="{{Comics.urls[0].url}}">link wiki</a><br> Autor: {{Comics.creators.items[0].name}}<br>
+                </p>
+            </mat-card-content>
+            <mat-card-footer>
+
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</div>
